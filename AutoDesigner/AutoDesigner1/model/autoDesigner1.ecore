@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="autoDesigner1" nsURI="http://www.example.org/autoDesigner1"
+    nsPrefix="autoDesigner1">
+  <eClassifiers xsi:type="ecore:EClass" name="VehicleTopology">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapping" upperBound="-1"
+        eType="#//Mapping" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" upperBound="-1" eType="#//Node"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" upperBound="-1"
+        eType="#//Application" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" upperBound="-1" eType="#//Link"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//Data"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data_in" upperBound="-1"
+        eType="#//Data_In" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data_out" upperBound="-1"
+        eType="#//Data_Out" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" upperBound="-1" eType="#//Task"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" upperBound="-1"
+        eType="#//Process" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappings" lowerBound="1"
+        upperBound="-1" eType="#//Mapping"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="app_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="destination" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="safetycritical" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" lowerBound="1"
+        upperBound="-1" eType="#//Process" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cammapping" eType="#//CamMapping"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lidarmapping" eType="#//LidarMapping"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mapping">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="m_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="app" lowerBound="1" eType="#//Application"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frameLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" eType="#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startingTimeVal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="#//GRBRS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ls" lowerBound="1" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lf" lowerBound="1" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="d_out" lowerBound="1" upperBound="-1"
+        eType="#//Data_Out"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="d_in" lowerBound="1" upperBound="-1"
+        eType="#//Data_In"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" lowerBound="1" upperBound="-1"
+        eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link_type" eType="#//Link_Type"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data_In">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="d_out" lowerBound="1" eType="#//Data_Out"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_in_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" lowerBound="1" eType="#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sentby" lowerBound="1"
+        eType="#//Process"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivedby" lowerBound="1"
+        upperBound="-1" eType="#//Process"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="d_in" lowerBound="1" upperBound="-1"
+        eType="#//Data_In"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="d_out" lowerBound="1" upperBound="-1"
+        eType="#//Data_Out"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" lowerBound="1" upperBound="-1"
+        eType="#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usercreatedtask" lowerBound="1"
+        eType="#//UserCreatedTask" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="n_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="destination" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" lowerBound="1" upperBound="-1"
+        eType="#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        upperBound="-1" eType="#//Application"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        upperBound="-1" eType="#//Application"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappings" upperBound="-1"
+        eType="#//Mapping"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data_Out">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="d_in" lowerBound="1" eType="#//Data_In"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data_out_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" lowerBound="1" eType="#//Link"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="GRBRS" instanceClassName="gurobi.GRBVar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Process">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" lowerBound="1"
+        eType="#//Application"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wcet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startingTime" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recieveData" lowerBound="1"
+        eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sendData" lowerBound="1"
+        eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startingTimeVal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EED">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//Node" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//Data"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
+        eType="#//Application" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappings" upperBound="-1"
+        eType="#//Mapping" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data_ins" upperBound="-1"
+        eType="#//Data_In" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data_outs" upperBound="-1"
+        eType="#//Data_Out" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settings" lowerBound="1"
+        eType="#//Settings" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="route" upperBound="-1"
+        eType="#//Route" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="process" upperBound="-1"
+        eType="#//Process" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" upperBound="-1"
+        eType="#//Task" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cores" upperBound="-1"
+        eType="#//Core" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partitions" upperBound="-1"
+        eType="#//Partition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gpus" upperBound="-1" eType="#//GPU"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cameras" upperBound="-1"
+        eType="#//Camera" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memories" upperBound="-1"
+        eType="#//Memory" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processors" upperBound="-1"
+        eType="#//Processor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lidars" upperBound="-1"
+        eType="#//Lidar" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caches" upperBound="-1"
+        eType="#//Cache" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usbs" upperBound="-1" eType="#//USB"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ethernets" upperBound="-1"
+        eType="#//Ethernet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="camMappings" upperBound="-1"
+        eType="#//CamMapping" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lidarMappings" upperBound="-1"
+        eType="#//LidarMapping" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ECU" eSuperTypes="#//Node #//ControllNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memories" upperBound="-1"
+        eType="#//Memory" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processors" upperBound="-1"
+        eType="#//Processor" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HPCU" eSuperTypes="#//Node #//ControllNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gpus" upperBound="-1" eType="#//GPU"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memories" upperBound="-1"
+        eType="#//Memory" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processors" upperBound="-1"
+        eType="#//Processor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partitions" upperBound="-1"
+        eType="#//Partition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkSwitch" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Gateway" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Link_Type" instanceClassName="Link_Type">
+    <eLiterals name="CAN_Bus"/>
+    <eLiterals name="FlexRay" value="1"/>
+    <eLiterals name="Ethernet" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Settings">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="optimizationGoal" eType="#//Optimization_Goal"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LOR" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LORValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="3"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="costOptimization" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="showMappings" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="redundantRoutes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="homogeneousRedundantRoutes"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useOptimizationGoals" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LORPropPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OptPropPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceUsage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Optimization_Goal">
+    <eLiterals name="endToEndLatency"/>
+    <eLiterals name="responsetime" value="1"/>
+    <eLiterals name="multiObjective" value="2" literal="multiObjective"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Route">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startNode" lowerBound="1"
+        eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endNode" lowerBound="1"
+        eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" eType="#//Data"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" upperBound="-1"
+        eType="#//Task"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="L_In">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="l_in_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l_out" lowerBound="1" eType="#//L_Out"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="L_Out">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="l_out_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l_in" lowerBound="1" eType="#//L_In"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Order">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order_gurobi" eType="#//GRBRS"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_dataout" lowerBound="1"
+        eType="#//Data_Out"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_datain" lowerBound="1"
+        eType="#//Data_In"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Node_type">
+    <eLiterals name="ECU"/>
+    <eLiterals name="HPCU" value="1"/>
+    <eLiterals name="NetworkSwitch" value="2"/>
+    <eLiterals name="Gateway" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPU">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memory_size_in_GB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cuda_cores" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Memory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DDR_Type" eType="#//DDRType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memory_size_gb" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DDRType">
+    <eLiterals name="DDR"/>
+    <eLiterals name="DDR2" value="1"/>
+    <eLiterals name="DDR3" value="2"/>
+    <eLiterals name="DDR4" value="3" literal="DDR4"/>
+    <eLiterals name="DDR5" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Processor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="turbo_boost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cores" upperBound="-1"
+        eType="#//Core" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Core">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clock_frequency_ghz" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="asil_d" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Asil" eType="#//Asil_Level"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="turbo_boost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Asil_Level" instanceClassName="Asil_Level">
+    <eLiterals name="QM"/>
+    <eLiterals name="ASIL_A" value="1"/>
+    <eLiterals name="ASIL_B" value="2"/>
+    <eLiterals name="ASIL_C" value="3"/>
+    <eLiterals name="ASIL_D" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Partition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="safety_critical" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity_GB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memory" eType="#//Memory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ethernet" eType="#//Ethernet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usb" eType="#//USB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cache" eType="#//Cache"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ethernet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="USB">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cache">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lidar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lidarmapping" eType="#//LidarMapping"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Camera">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cammapping" eType="#//CamMapping"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ControllNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UserCreatedTask" eSuperTypes="#//Task"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LidarMapping">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lidar" eType="#//Lidar"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" eType="#//Application"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CamMapping">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="camera" eType="#//Camera"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" eType="#//Application"/>
+  </eClassifiers>
+</ecore:EPackage>

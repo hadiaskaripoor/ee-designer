@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.tum.AutoDesigner1</groupId>
+  <artifactId>AutoDesigner1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <repositories>
+		<repository>
+			<id>github-sirius-components</id>
+			<url>https://maven.pkg.github.com/eclipse-sirius/sirius-components</url>
+		</repository>
+	</repositories>
+	
+  <build>
+    <sourceDirectory>src-gen</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>15</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  	<dependencies>
+  	<dependency>
+  		<groupId>org.eclipse.emf</groupId>
+  		<artifactId>org.eclipse.emf.ecore</artifactId>
+  		<version>2.24.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.eclipse.emf</groupId>
+  		<artifactId>org.eclipse.emf.common</artifactId>
+  		<version>2.22.0</version>
+  	</dependency>  
+  		<!-- https://mvnrepository.com/artifact/gurobi/gurobi -->
+	<dependency>
+   		<groupId>gurobi</groupId>
+   		<artifactId>gurobi</artifactId>
+  		<version>9.1.0</version>
+	</dependency>
+	
+  </dependencies>
+</project>

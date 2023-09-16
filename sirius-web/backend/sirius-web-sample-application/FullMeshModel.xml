@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ASCII"?>
+<autoDesigner1:EED xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:autoDesigner1="http://www.example.org/autoDesigner1">
+  <nodes xsi:type="autoDesigner1:ECU" name="Node0" cost="50" links="_CooRsDGsEe2fYqeXS733Vw _CooRsTGsEe2fYqeXS733Vw" sender="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" receiver="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" id="_jZ_oQDGnEe2fYqeXS733Vw"/>
+  <nodes xsi:type="autoDesigner1:ECU" name="Node1" cost="50" links="_jZ_oRDGnEe2fYqeXS733Vw _jZ_oRTGnEe2fYqeXS733Vw _jZ_oRjGnEe2fYqeXS733Vw" sender="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" receiver="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" id="_jZ_oQTGnEe2fYqeXS733Vw"/>
+  <nodes xsi:type="autoDesigner1:ECU" name="Node2" links="_CooRsjGsEe2fYqeXS733Vw" sender="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" receiver="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" id="_jZ_oQjGnEe2fYqeXS733Vw"/>
+  <nodes xsi:type="autoDesigner1:ECU" name="Node3" links="_jZ_oRzGnEe2fYqeXS733Vw" sender="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" receiver="_jZ_oSTGnEe2fYqeXS733Vw _jZ_oTTGnEe2fYqeXS733Vw _jZ_oUjGnEe2fYqeXS733Vw _jZ_oVjGnEe2fYqeXS733Vw _jZ_oWzGnEe2fYqeXS733Vw _jZ_oXzGnEe2fYqeXS733Vw _jZ_oZDGnEe2fYqeXS733Vw _jZ_oaDGnEe2fYqeXS733Vw" id="_jZ_oQzGnEe2fYqeXS733Vw"/>
+  <links name="link_Node1_Node0" ls="_jZ_oQTGnEe2fYqeXS733Vw" lf="_jZ_oQDGnEe2fYqeXS733Vw" id="_jZ_oRDGnEe2fYqeXS733Vw"/>
+  <links name="link_Node1_Node2" ls="_jZ_oQTGnEe2fYqeXS733Vw" lf="_jZ_oQjGnEe2fYqeXS733Vw" id="_jZ_oRTGnEe2fYqeXS733Vw"/>
+  <links name="link_Node1_Node3" ls="_jZ_oQTGnEe2fYqeXS733Vw" lf="_jZ_oQzGnEe2fYqeXS733Vw" id="_jZ_oRjGnEe2fYqeXS733Vw"/>
+  <links name="link_Node3_Node1" ls="_jZ_oQzGnEe2fYqeXS733Vw" lf="_jZ_oQTGnEe2fYqeXS733Vw" id="_jZ_oRzGnEe2fYqeXS733Vw"/>
+  <links name="link_Node0_Node2" ls="_jZ_oQDGnEe2fYqeXS733Vw" lf="_jZ_oQjGnEe2fYqeXS733Vw" id="_CooRsDGsEe2fYqeXS733Vw"/>
+  <links name="link_Node0_Node3" ls="_jZ_oQDGnEe2fYqeXS733Vw" lf="_jZ_oQzGnEe2fYqeXS733Vw" id="_CooRsTGsEe2fYqeXS733Vw"/>
+  <links name="link_Node2_Node3" ls="_jZ_oQjGnEe2fYqeXS733Vw" lf="_jZ_oQzGnEe2fYqeXS733Vw" id="_CooRsjGsEe2fYqeXS733Vw"/>
+  <data name="Data0" sentby="_jZ_oSjGnEe2fYqeXS733Vw" id="_jZ_oSDGnEe2fYqeXS733Vw">
+    <usercreatedtask name="TaskData0" frameLength="0.05" period="500" data="_jZ_oSDGnEe2fYqeXS733Vw"/>
+  </data>
+  <data name="Data1" sentby="_jZ_oUzGnEe2fYqeXS733Vw" id="_jZ_oUTGnEe2fYqeXS733Vw">
+    <usercreatedtask name="TaskData1" frameLength="0.05" period="500" data="_jZ_oUTGnEe2fYqeXS733Vw"/>
+  </data>
+  <data name="Data2" sentby="_jZ_oXDGnEe2fYqeXS733Vw" id="_jZ_oWjGnEe2fYqeXS733Vw">
+    <usercreatedtask name="TaskData2" frameLength="0.05" period="500" data="_jZ_oWjGnEe2fYqeXS733Vw"/>
+  </data>
+  <data name="Data3" sentby="_jZ_oZTGnEe2fYqeXS733Vw" id="_jZ_oYzGnEe2fYqeXS733Vw">
+    <usercreatedtask name="TaskData3" frameLength="0.05" period="500" data="_jZ_oYzGnEe2fYqeXS733Vw"/>
+  </data>
+  <applications name="Application0Data0" id="_jZ_oSTGnEe2fYqeXS733Vw">
+    <process application="_jZ_oSTGnEe2fYqeXS733Vw" name="Process0Application0Data0" wcet="5.0" period="600" sendData="_jZ_oSDGnEe2fYqeXS733Vw" id="_jZ_oSjGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oSTGnEe2fYqeXS733Vw" name="Process1Application0Data0" wcet="1.0" period="1200" id="_jZ_oSzGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oSTGnEe2fYqeXS733Vw" name="Process2Application0Data0" wcet="2.0" period="300" id="_jZ_oTDGnEe2fYqeXS733Vw"/>
+  </applications>
+  <applications name="Application1Data0" id="_jZ_oTTGnEe2fYqeXS733Vw">
+    <process application="_jZ_oTTGnEe2fYqeXS733Vw" name="Process0Application1Data0" wcet="5.0" period="600" id="_jZ_oTjGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oTTGnEe2fYqeXS733Vw" name="Process1Application1Data0" wcet="1.0" period="1200" recieveData="_jZ_oSDGnEe2fYqeXS733Vw" id="_jZ_oTzGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oTTGnEe2fYqeXS733Vw" name="Process2Application1Data0" wcet="2.0" period="300" id="_jZ_oUDGnEe2fYqeXS733Vw"/>
+  </applications>
+  <applications name="Application0Data1" id="_jZ_oUjGnEe2fYqeXS733Vw">
+    <process application="_jZ_oUjGnEe2fYqeXS733Vw" name="Process0Application0Data1" wcet="5.0" period="600" sendData="_jZ_oUTGnEe2fYqeXS733Vw" id="_jZ_oUzGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oUjGnEe2fYqeXS733Vw" name="Process1Application0Data1" wcet="1.0" period="1200" id="_jZ_oVDGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oUjGnEe2fYqeXS733Vw" name="Process2Application0Data1" wcet="2.0" period="300" id="_jZ_oVTGnEe2fYqeXS733Vw"/>
+  </applications>
+  <applications name="Application1Data1" id="_jZ_oVjGnEe2fYqeXS733Vw">
+    <process application="_jZ_oVjGnEe2fYqeXS733Vw" name="Process0Application1Data1" wcet="5.0" period="600" id="_jZ_oVzGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oVjGnEe2fYqeXS733Vw" name="Process1Application1Data1" wcet="1.0" period="1200" recieveData="_jZ_oUTGnEe2fYqeXS733Vw" id="_jZ_oWDGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oVjGnEe2fYqeXS733Vw" name="Process2Application1Data1" wcet="2.0" period="300" id="_jZ_oWTGnEe2fYqeXS733Vw"/>
+  </applications>
+  <applications name="Application0Data2" id="_jZ_oWzGnEe2fYqeXS733Vw">
+    <process application="_jZ_oWzGnEe2fYqeXS733Vw" name="Process0Application0Data2" wcet="5.0" period="600" sendData="_jZ_oWjGnEe2fYqeXS733Vw" id="_jZ_oXDGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oWzGnEe2fYqeXS733Vw" name="Process1Application0Data2" wcet="1.0" period="1200" id="_jZ_oXTGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oWzGnEe2fYqeXS733Vw" name="Process2Application0Data2" wcet="2.0" period="300" id="_jZ_oXjGnEe2fYqeXS733Vw"/>
+  </applications>
+  <applications name="Application1Data2" id="_jZ_oXzGnEe2fYqeXS733Vw">
+    <process application="_jZ_oXzGnEe2fYqeXS733Vw" name="Process0Application1Data2" wcet="5.0" period="600" id="_jZ_oYDGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oXzGnEe2fYqeXS733Vw" name="Process1Application1Data2" wcet="1.0" period="1200" recieveData="_jZ_oWjGnEe2fYqeXS733Vw" id="_jZ_oYTGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oXzGnEe2fYqeXS733Vw" name="Process2Application1Data2" wcet="2.0" period="300" id="_jZ_oYjGnEe2fYqeXS733Vw"/>
+  </applications>
+  <applications name="Application0Data3" id="_jZ_oZDGnEe2fYqeXS733Vw">
+    <process application="_jZ_oZDGnEe2fYqeXS733Vw" name="Process0Application0Data3" wcet="5.0" period="600" sendData="_jZ_oYzGnEe2fYqeXS733Vw" id="_jZ_oZTGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oZDGnEe2fYqeXS733Vw" name="Process1Application0Data3" wcet="1.0" period="1200" id="_jZ_oZjGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oZDGnEe2fYqeXS733Vw" name="Process2Application0Data3" wcet="2.0" period="300" id="_jZ_oZzGnEe2fYqeXS733Vw"/>
+  </applications>
+  <applications name="Application1Data3" id="_jZ_oaDGnEe2fYqeXS733Vw">
+    <process application="_jZ_oaDGnEe2fYqeXS733Vw" name="Process0Application1Data3" wcet="5.0" period="600" id="_jZ_oaTGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oaDGnEe2fYqeXS733Vw" name="Process1Application1Data3" wcet="1.0" period="1200" recieveData="_jZ_oYzGnEe2fYqeXS733Vw" id="_jZ_oajGnEe2fYqeXS733Vw"/>
+    <process application="_jZ_oaDGnEe2fYqeXS733Vw" name="Process2Application1Data3" wcet="2.0" period="300" id="_jZ_oazGnEe2fYqeXS733Vw"/>
+  </applications>
+  <settings name="Settings1"/>
+</autoDesigner1:EED>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<autoDesigner1:EED xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:autoDesigner1="http://www.example.org/autoDesigner1">
+  <nodes xmi:type="autoDesigner1:ECU" name="ecu1" links="_Opx-QEr5Ee20gZSDzMnbwg" mappings="//@mappings.0" id="_NfyQUEr5Ee20gZSDzMnbwg"/>
+  <nodes xmi:type="autoDesigner1:ECU" name="ecu2" mappings="//@mappings.1 //@mappings.2" id="_N9op8Er5Ee20gZSDzMnbwg"/>
+  <links name="Link1" ls="_NfyQUEr5Ee20gZSDzMnbwg" lf="_N9op8Er5Ee20gZSDzMnbwg" id="_Opx-QEr5Ee20gZSDzMnbwg"/>
+  <data name="Data1" sentby="_QQmyIEr5Ee20gZSDzMnbwg" receivedby="_QmZb8Er5Ee20gZSDzMnbwg" id="_Ldg2kUr5Ee20gZSDzMnbwg"/>
+  <applications name="App1" mappings="//@mappings.1" id="_MYLvEEr5Ee20gZSDzMnbwg">
+    <process application="_MYLvEEr5Ee20gZSDzMnbwg" name="P1.App1" wcet="1.0" period="8" sendData="_Ldg2kUr5Ee20gZSDzMnbwg" id="_QQmyIEr5Ee20gZSDzMnbwg"/>
+  </applications>
+  <applications name="App2" mappings="//@mappings.0" id="_MxXrIEr5Ee20gZSDzMnbwg">
+    <process application="_MxXrIEr5Ee20gZSDzMnbwg" name="P1.App2" wcet="1.0" period="16" recieveData="_Ldg2kUr5Ee20gZSDzMnbwg" id="_QmZb8Er5Ee20gZSDzMnbwg"/>
+  </applications>
+  <applications name="App3" mappings="//@mappings.2" id="_eIqHEEr5Ee20gZSDzMnbwg">
+    <process application="_eIqHEEr5Ee20gZSDzMnbwg" name="P1.App3" wcet="1.0" period="8" startingTimeVal="0.9999999999999893" id="_eZ_HoEr5Ee20gZSDzMnbwg"/>
+    <process application="_eIqHEEr5Ee20gZSDzMnbwg" name="P2.App3" wcet="2.0" period="24" startingTimeVal="17.999999999999957" id="_evoAcEr5Ee20gZSDzMnbwg"/>
+  </applications>
+  <mappings node="_NfyQUEr5Ee20gZSDzMnbwg" name="MapApp2ecu1" app="_MxXrIEr5Ee20gZSDzMnbwg"/>
+  <mappings node="_N9op8Er5Ee20gZSDzMnbwg" name="MapApp1ecu2" app="_MYLvEEr5Ee20gZSDzMnbwg"/>
+  <mappings node="_N9op8Er5Ee20gZSDzMnbwg" name="MapApp3ecu2" app="_eIqHEEr5Ee20gZSDzMnbwg"/>
+  <settings name="Settings"/>
+  <route name="Routeecu2ecu1" startNode="_N9op8Er5Ee20gZSDzMnbwg" endNode="_NfyQUEr5Ee20gZSDzMnbwg" data="_Ldg2kUr5Ee20gZSDzMnbwg"/>
+</autoDesigner1:EED>

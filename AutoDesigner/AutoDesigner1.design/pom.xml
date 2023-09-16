@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.tum.AutoDesigner1.design</groupId>
+  <artifactId>AutoDesigner1.design</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>15</release>
+        </configuration>
+      </plugin>
+    </plugins>
+    
+    <resources>
+   	 <resource>
+        <directory>description</directory>
+   	 </resource>
+	</resources>	
+  </build>
+  
+    <dependencies>
+  	<dependency>
+  		<groupId>com.tum.AutoDesigner1</groupId>
+  		<artifactId>AutoDesigner1</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  	  <groupId>com.tum.AutoDesigner1.edit</groupId>
+  	  <artifactId>AutoDesigner1.edit</artifactId>
+ 	  <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  
+</project>

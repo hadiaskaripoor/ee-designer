@@ -1,0 +1,106 @@
+= Sirius Components (for Sirius Web)
+
+https://www.eclipse.org/sirius/sirius-web.html[Eclipse Sirius Web] is a framework to easily create and deploy studios to the web.
+We keep the principles which made the success of https://www.eclipse.org/sirius[Eclipse Sirius Desktop] and make them available on a modern cloud-based stack.
+
+This repository, `sirius-components`, contains the building blocks from which Sirius Web applications are built:
+
+* `frontend` contains reusable React components used to build the application's UI;
+* `backend` contains the Spring Boot projects from which the corresponding backend is built.
+
+To actually build and run a complete example application, see https://github.com/eclipse-sirius/sirius-web[the `sirius-web` repository] which contains a complete example of a Sirius Web modeler built using these components.
+
+== Building
+
+=== Requirements
+
+To build the components in this repository on your own, you will need the following tools installed:
+
+* Git, and a GitHub account
+* To build the backend components:
+** Java 11 (Java 12 or later are currently not supported)
+** https://maven.apache.org[Apache Maven 3.6.3]
+* To build the frontend components:
+** Recent versions of https://nodejs.org/[Node and NPM]: in particular, Node >= 16.6 is required along with npm >= 7.20.
+** https://rollupjs.org/[rollup] (`npm install -g rollup`)
+** https://github.com/whitecolor/yalc[yalc] (`npm install -g yalc`)
+
+WARNING: Note that there are issues with NPM under Windows Subsystem for Linux (WSL).
+If you use WSL and encounter error messages like _"Maximum call stack size exceeded"_ when running NPM, switch to plain Windows where this should work.
+
+=== GitHub Access Token
+
+The backend part of _Sirius Components_ depends on https://github.com/eclipse-sirius/sirius-emf-json[`sirius-emf-json`], which is published as Maven artifacts in _GitHub Packages_.
+To build `sirius-components` locally, you need a _GitHub Access Token_ so that Maven can download the `sirius-emf-json` and `Flow-Designer` artifacts.
+
+. Create a personal token with a scope of `read:package` by following https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token[the GitHub documentation] if you do not have one already.
++
+WARNING: Once generated, a token cannot be displayed anymore, so make sure to copy it in a secure location.
+. Create or edit `$HOME/.m2/settings.xml` to tell Maven to use this token when accessing the Sirius EMF JSON repository:
++
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <id>github-sirius-emfjson</id>
+      <username>$GITHUB_USERNAME</username>
+      <password>$GITHUB_ACCESS_TOKEN</password>
+    </server>
+    <server>
+      <id>github-flow</id>
+      <username>$GITHUB_USERNAME</username>
+      <password>$GITHUB_ACCESS_TOKEN</password>
+    </server>
+  </servers>
+</settings>
+----
++
+Be sure to replace `$GITHUB_USERNAME` with your GitHub user id, and `$GITHUB_ACCESS_TOKEN` with the value of your acess token.
++
+IMPORTANT: The `id` used in your `settings.xml` *must* be `github-sirius-emfjson` and `github-flow` to match what is used in the POMs.
+
+=== Build steps
+
+1. Clone the Sirius Components repository:
++
+[source,sh]
+----
+git clone https://github.com/eclipse-sirius/sirius-components.git
+----
+2. Build the frontend components.
+From the `frontend` directory:
++
+----
+npm ci
+npm run build
+----
++
+NOTE: You may see some warnings when building the frontend (skipped optional dependencies during `npm ci`, circular dependencies detected on an indirect dependency during the build).
+You can ignore them, they do not cause any actual issue at runtime.
+3. Publish the built version of the frontend components locally.
+Still from inside `sirius-components/frontend`: 
++
+[source,sh]
+----
+yalc publish
+----
++
+NOTE: This step is not strictly needed but will allow you to consume your locally built version of the frontend components if you want to build a complete Sirius Web studio using them without publishing them to an external NPM registry.
+4. Build the backend components.
+From the `sirius-components/backend` directory:
++
+[source,sh]
+----
+mvn clean install
+----
++
+TIP: If you are behind a proxy, you may get Maven errors about checkstyle.org not being available.
+In this case you need to explicitly disable CheckStyle from the build: `mvn clean install -f releng/org.eclipse.sirius.emfjson.releng/pom.xml -P\!checkstyle`
+
+== License
+
+Everything in this repository is Open Source. Except when explicitly mentioned otherwise (e.g. for some resources likes icons which are under Apache-2.0), the license is Eclipse Public License - v 2.0.

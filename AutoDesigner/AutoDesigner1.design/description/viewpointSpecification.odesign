@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="viewpointSpecification" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint" modelFileExtension="routing">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="EED-Diagram" domainClass="autoDesigner1::EED">
+      <metamodel href="http://www.example.org/autoDesigner1#/"/>
+      <defaultLayer name="Elements">
+        <nodeMappings name="Settings" domainClass="autoDesigner1::Settings">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/settings.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Gateway" semanticCandidatesExpression="feature:nodes" domainClass="autoDesigner1::Gateway">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" arcWidth="0" arcHeight="0" workspacePath="/AutoDesigner1.design/images/modem.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="NetworkSwitch" semanticCandidatesExpression="feature:nodes" domainClass="autoDesigner1::NetworkSwitch">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/switch2.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Camera" semanticCandidatesExpression="feature:cameras" domainClass="autoDesigner1::Camera">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/camera.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Lidar" semanticCandidatesExpression="feature:lidars" domainClass="autoDesigner1::Lidar">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/radar.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="USB" semanticCandidatesExpression="feature:usbs" domainClass="autoDesigner1::USB">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/usb.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Ethernet" semanticCandidatesExpression="feature:ethernets" domainClass="autoDesigner1::Ethernet">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/ethernet.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Cache" semanticCandidatesExpression="feature:caches" domainClass="autoDesigner1::Cache">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cache.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <containerMappings name="AppContainer" semanticCandidatesExpression="aql:self.eContents()" domainClass="autoDesigner1::Application">
+          <subNodeMappings name="Process" semanticCandidatesExpression="feature:process" domainClass="autoDesigner1::Process">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/thread.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="6" workspacePath="/AutoDesigner1.design/images/application.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.process->size()>0 and self.safetycritical=true">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.process->size()>0">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.safetycritical = true">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="6" workspacePath="/AutoDesigner1.design/images/application_safety_critical.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <containerMappings name="HPCUContainer" semanticCandidatesExpression="aql:self.eContents()" domainClass="autoDesigner1::HPCU">
+          <subNodeMappings name="Gpu" semanticCandidatesExpression="feature:gpus" domainClass="autoDesigner1::GPU">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/gpu.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="MemoryH" semanticCandidatesExpression="feature:memories" domainClass="autoDesigner1::Memory">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/memory.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="Partition" semanticCandidatesExpression="feature:partitions" domainClass="autoDesigner1::Partition">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/partition.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="ProcessorContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="autoDesigner1::Processor">
+            <subNodeMappings name="Core" semanticCandidatesExpression="feature:cores" domainClass="autoDesigner1::Core">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/core.svg">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='QM' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_qm_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_A' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_a_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_B' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_b_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_C' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_c_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_D' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_d_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='QM'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_qm.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_A'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_a.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_B'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_b.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_C'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_c.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_D'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_d.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+            </subNodeMappings>
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:self.turbo_boost and self.eContents()->size()>0">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu_container_turbo.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.turbo_boost">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu_turbo.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.eContents()->size()>0 ">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu_container.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="6" workspacePath="/AutoDesigner1.design/images/HPCU.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.eContents()->size()>0 ">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="10" borderLineStyle="dash" labelSize="12" workspacePath="/AutoDesigner1.design/images/HPCU-container2.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <containerMappings name="ECUContainer" domainClass="autoDesigner1::ECU">
+          <subNodeMappings name="MemoryE" semanticCandidatesExpression="feature:memories" domainClass="autoDesigner1::Memory">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/memory.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="ProcessorContainerE" semanticCandidatesExpression="feature:eAllContents" domainClass="autoDesigner1::Processor">
+            <subNodeMappings name="CoreE" semanticCandidatesExpression="feature:cores" domainClass="autoDesigner1::Core">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="4" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/core.svg">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='QM' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_qm_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_A' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_a_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_B' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_b_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_C' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_c_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_D' and self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_d_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='QM'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_qm.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_A'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_a.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_B'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_b.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_C'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_c.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.Asil.toString()='ASIL_D'">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_asil_d.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.turbo_boost">
+                <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/cpu_turboboost.svg">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+            </subNodeMappings>
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+            <conditionnalStyles predicateExpression="aql:self.turbo_boost and self.eContents()->size()>0">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu_container_turbo.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.turbo_boost">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu_turbo.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.eContents()->size()>0 ">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="12" workspacePath="/AutoDesigner1.design/images/cpu_container.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" sizeComputationExpression="6" workspacePath="/AutoDesigner1.design/images/ecu.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.eContents()->size()>0 ">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="10" borderLineStyle="dash" labelSize="12" workspacePath="/AutoDesigner1.design/images/ecu-container.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <containerMappings name="DataContainer" domainClass="autoDesigner1::Data">
+          <borderedNodeMappings name="Task" semanticCandidatesExpression="feature:eAllContents" domainClass="autoDesigner1::UserCreatedTask">
+            <style xsi:type="style:SquareDescription" labelSize="12" sizeComputationExpression="1" labelPosition="node" resizeKind="NSEW" width="1" height="1">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>EAST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="6" labelPosition="node" resizeKind="NSEW" workspacePath="/AutoDesigner1.design/images/data.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Creation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Gateway" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Gateway']" iconPath="/AutoDesigner1.design/images/modem.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Gateway" referenceName="nodes">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'gateway' + container.nodes->filter(autoDesigner1::Gateway)->size()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="NetworkSwitch" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='NetworkSwitch']" iconPath="/AutoDesigner1.design/images/switch2.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::NetworkSwitch" referenceName="nodes">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'network switch' + container.nodes->filter(autoDesigner1::NetworkSwitch)->size()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Application" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='AppContainer']" iconPath="/AutoDesigner1.design/images/application.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Application" referenceName="applications">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'App' + container.applications->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Process" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='AppContainer']/@subNodeMappings[name='Process']" iconPath="/AutoDesigner1.design/images/thread.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Process" referenceName="process">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'P' + self.eContainer().eContents()->size()  + '.' +  self.eContainer().name"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="application" valueExpression="aql:self.eContainer()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Processor" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']/@subContainerMappings[name='ProcessorContainer'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer']/@subContainerMappings[name='ProcessorContainerE']" iconPath="/AutoDesigner1.design/images/cpu.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Processor" referenceName="processors">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Pr'+self.eContainer().eContents()->filter(autoDesigner1::Processor)->size() +'.'+self.eContainer().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="HPCU" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']" iconPath="/AutoDesigner1.design/images/HPCU.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::HPCU" referenceName="nodes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'hpcu' + container.nodes->filter(autoDesigner1::HPCU)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Core" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']/@subContainerMappings[name='ProcessorContainer']/@subNodeMappings[name='Core'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer']/@subContainerMappings[name='ProcessorContainerE']/@subNodeMappings[name='CoreE']" iconPath="/AutoDesigner1.design/images/core.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Core" referenceName="cores">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'C' + self.eContainer().eContents()->size() + '.' + self.eContainer().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MemoryH" label="Memory" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']/@subNodeMappings[name='MemoryH']" iconPath="/AutoDesigner1.design/images/memory.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Memory" referenceName="memories">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'M' + self.eContainer().eContents()->filter(autoDesigner1::Memory)->size() + '.' + self.eContainer().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="GPU" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']/@subNodeMappings[name='Gpu']" iconPath="/AutoDesigner1.design/images/gpu.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::GPU" referenceName="gpus">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'G' + self.eContainer().eContents()->filter(autoDesigner1::GPU)->size()+'.'+self.eContainer().name"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Partition" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']/@subNodeMappings[name='Partition']" iconPath="/AutoDesigner1.design/images/partition.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Partition" referenceName="partitions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Pa' + self.eContainer().eContents()->filter(autoDesigner1::Partition)->size()+'.'+self.eContainer().name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ECU" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer']" iconPath="/AutoDesigner1.design/images/ecu.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::ECU" referenceName="nodes">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'ecu' + container.nodes->filter(autoDesigner1::ECU)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MemoryE" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer']/@subNodeMappings[name='MemoryE']" iconPath="/AutoDesigner1.design/images/memory.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Memory" referenceName="memories">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Memory' + self.eContainer().eContents()->filter(autoDesigner1::Memory)->size()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="settings" label="Settings" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Settings']" iconPath="/AutoDesigner1.design/images/settings.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Settings" referenceName="settings">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Settings'"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Data" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='DataContainer']" iconPath="/AutoDesigner1.design/images/data.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Data" referenceName="data">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Data' + container.data->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Task" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='DataContainer']/@borderedNodeMappings[name='Task']" iconPath="/AutoDesigner1.design/images/task.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::UserCreatedTask" referenceName="usercreatedtask">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'T'+ self.eContainer().eContents()->size()  + '.' + self.eContainer().name"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="data" valueExpression="aql:self.eContainer()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Camera" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Camera']" iconPath="/AutoDesigner1.design/images/camera.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Camera" referenceName="cameras">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Camera' + container.cameras->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Lidar" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Lidar']" iconPath="/AutoDesigner1.design/images/radar.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Lidar" referenceName="lidars">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Lidar' + container.lidars->size()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="USB" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='USB']" iconPath="/AutoDesigner1.design/images/usb.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::USB" referenceName="usbs">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'USB' + container.usbs->size()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Ethernet" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Ethernet']" iconPath="/AutoDesigner1.design/images/ethernet.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Ethernet" referenceName="ethernets">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Ethernet' + container.ethernets->size()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Cache" nodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Cache']" iconPath="/AutoDesigner1.design/images/cache.svg">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Cache" referenceName="caches">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Cache' + container.caches->size()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Mappings" activeByDefault="true">
+        <edgeMappings name="Mapping" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='AppContainer']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']" targetFinderExpression="aql:self.node" sourceFinderExpression="aql:self.app" domainClass="autoDesigner1::Mapping" useDomainElement="true">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.eContainer().settings.showMappings=true and self.app.process->select(p | (((self.eContainer().settings.data.receivedby->select(p2 |  p2.id = p.id ))->size()>0 )or (p.id = self.eContainer().settings.data.sentby.id)))->size()>0">
+            <style sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:(self.eContainer().settings.showMappings=true) and ( self.eContainer().settings.data = null))">
+            <style sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.eContainer().settings.showMappings=false">
+            <style sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="CamMapping" label="CamMapping" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Camera']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='AppContainer']" targetFinderExpression="aql:self.application" sourceFinderExpression="aql:self.camera" domainClass="autoDesigner1::CamMapping" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="LidarMapping" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Lidar']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='AppContainer']" targetFinderExpression="aql:self.application" sourceFinderExpression="aql:self.lidar" domainClass="autoDesigner1::LidarMapping" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Creation">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CamMapping" label="Mapping to Application" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@additionalLayers[name='Mappings']/@edgeMappings[name='CamMapping']" iconPath="/AutoDesigner1.design/images/mapping.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::CamMapping" referenceName="camMappings">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'CamMapping' + self.eContainer().eContents()->filter(autoDesigner1::CamMapping)->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="camera" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="application" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="LidarMapping" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@additionalLayers[name='Mappings']/@edgeMappings[name='LidarMapping']" iconPath="/AutoDesigner1.design/images/mapping.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::LidarMapping" referenceName="lidarMappings">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'LidarMapping' + self.eContainer().eContents()->filter(autoDesigner1::LidarMapping)->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="lidar" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="application" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Mapping" label="Mapping" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@additionalLayers[name='Mappings']/@edgeMappings[name='Mapping']" iconPath="/AutoDesigner1.design/images/mapping.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Mapping" referenceName="mappings">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Mapping' + self.eContainer().eContents()->filter(autoDesigner1::Mapping)->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="node" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="app" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="mappings" valueExpression="var:instance"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="mappings" valueExpression="var:instance"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Edges" activeByDefault="true">
+        <edgeMappings name="Link" preconditionExpression="aql:self.ls.differs(self.lf)" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Gateway'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='NetworkSwitch'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Gateway'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='NetworkSwitch'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer']" targetFinderExpression="aql:self.lf" sourceFinderExpression="aql:self.ls" domainClass="autoDesigner1::Link" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:cost">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.eContainer().route->select(r | (r.data.id=self.eContainer().settings.data.id) and (((self.ls.id = r.startNode.id) and (self.lf.id = r.endNode.id)) or ((self.lf.id = r.startNode.id) and (self.ls.id = r.endNode.id))))->size()>0">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.link_type = autoDesigner1::Link_Type::FlexRay">
+            <style sourceArrow="Diamond" targetArrow="Diamond" sizeComputationExpression="3" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:cost">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.link_type = autoDesigner1::Link_Type::CAN_Bus">
+            <style sourceArrow="FillDiamond" targetArrow="FillDiamond" sizeComputationExpression="2" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:cost">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:self.link_type = autoDesigner1::Link_Type::Ethernet">
+            <style sourceArrow="OutputFillClosedArrow" targetArrow="OutputFillClosedArrow" sizeComputationExpression="4" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:cost">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="DataSendBy" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='DataContainer']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='AppContainer']/@subNodeMappings[name='Process']" targetFinderExpression="aql:self.sentby">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Sent by'">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DataReceivedBy" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='DataContainer']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='AppContainer']/@subNodeMappings[name='Process']" targetFinderExpression="aql:self.receivedby">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'Received by'">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Route" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='NetworkSwitch'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Gateway'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='NetworkSwitch'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@nodeMappings[name='Gateway'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='HPCUContainer'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='ECUContainer']" targetFinderExpression="aql:self.endNode" sourceFinderExpression="aql:self.startNode" domainClass="autoDesigner1::Route" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="0">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.eContainer().settings.data.id=self.data.id">
+            <style sizeComputationExpression="4">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="ChoosenRouteData" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@defaultLayer/@containerMappings[name='DataContainer']" targetFinderExpression="aql:self.data">
+          <style lineStyle="dot" targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'show Route of this Data'">
+              <labelFormat>bold</labelFormat>
+              <labelFormat>italic</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Creation">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Link" precondition="aql:preTarget.differs(preSource)" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='EED-Diagram']/@additionalLayers[name='Edges']/@edgeMappings[name='Link']" iconPath="/AutoDesigner1.design/images/link.png">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="autoDesigner1::Link" referenceName="links">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Link' + self.eContainer().eContents()->filter(autoDesigner1::Link)->size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ls" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="lf" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="links" valueExpression="var:instance"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="autoDesigner1.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

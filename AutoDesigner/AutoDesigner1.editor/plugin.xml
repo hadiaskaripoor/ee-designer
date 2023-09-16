@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated autoDesigner1 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="autoDesigner1.presentation.AutoDesigner1ModelWizardID"
+            name="%_UI_AutoDesigner1ModelWizard_label"
+            class="autoDesigner1.presentation.AutoDesigner1ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AutoDesigner1ModelFile.gif">
+         <description>%_UI_AutoDesigner1ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated autoDesigner1 -->
+      <editor
+            id="autoDesigner1.presentation.AutoDesigner1EditorID"
+            name="%_UI_AutoDesigner1Editor_label"
+            icon="icons/full/obj16/AutoDesigner1ModelFile.gif"
+            extensions="autodesigner1"
+            class="autoDesigner1.presentation.AutoDesigner1Editor"
+            contributorClass="autoDesigner1.presentation.AutoDesigner1ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

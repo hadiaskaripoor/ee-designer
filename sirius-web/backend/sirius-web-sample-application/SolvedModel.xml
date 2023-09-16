@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<autoDesigner1:EED xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:autoDesigner1="http://www.example.org/autoDesigner1">
+  <nodes xsi:type="autoDesigner1:ECU" name="ecu1" links="_Opx-QEr5Ee20gZSDzMnbwg" mappings="//@mappings.0" id="_NfyQUEr5Ee20gZSDzMnbwg"/>
+  <nodes xsi:type="autoDesigner1:ECU" name="ecu2" mappings="//@mappings.1 //@mappings.2" id="_N9op8Er5Ee20gZSDzMnbwg"/>
+  <links name="Link1" ls="_NfyQUEr5Ee20gZSDzMnbwg" lf="_N9op8Er5Ee20gZSDzMnbwg" id="_Opx-QEr5Ee20gZSDzMnbwg"/>
+  <data name="Data1" sentby="_QQmyIEr5Ee20gZSDzMnbwg" receivedby="_QmZb8Er5Ee20gZSDzMnbwg" id="_Ldg2kUr5Ee20gZSDzMnbwg"/>
+  <applications name="App1" mappings="//@mappings.1" id="_MYLvEEr5Ee20gZSDzMnbwg">
+    <process application="_MYLvEEr5Ee20gZSDzMnbwg" name="P1.App1" wcet="1.0" period="8" startingTime="gurobi.GRBVar@24bcbe34" sendData="_Ldg2kUr5Ee20gZSDzMnbwg" id="_QQmyIEr5Ee20gZSDzMnbwg"/>
+  </applications>
+  <applications name="App2" mappings="//@mappings.0" id="_MxXrIEr5Ee20gZSDzMnbwg">
+    <process application="_MxXrIEr5Ee20gZSDzMnbwg" name="P1.App2" wcet="1.0" period="16" startingTime="gurobi.GRBVar@1fb7c8fb" recieveData="_Ldg2kUr5Ee20gZSDzMnbwg" id="_QmZb8Er5Ee20gZSDzMnbwg"/>
+  </applications>
+  <applications name="App3" mappings="//@mappings.2" id="_eIqHEEr5Ee20gZSDzMnbwg">
+    <process application="_eIqHEEr5Ee20gZSDzMnbwg" name="P1.App3" wcet="1.0" period="8" startingTime="gurobi.GRBVar@68e5dac7" startingTimeVal="0.9999999999999893" id="_eZ_HoEr5Ee20gZSDzMnbwg"/>
+    <process application="_eIqHEEr5Ee20gZSDzMnbwg" name="P2.App3" wcet="2.0" period="24" startingTime="gurobi.GRBVar@6af63480" startingTimeVal="17.999999999999957" id="_evoAcEr5Ee20gZSDzMnbwg"/>
+  </applications>
+  <mappings node="_NfyQUEr5Ee20gZSDzMnbwg" name="MapApp2ecu1" m_gurobi="gurobi.GRBVar@2bfa6af4" app="_MxXrIEr5Ee20gZSDzMnbwg"/>
+  <mappings node="_N9op8Er5Ee20gZSDzMnbwg" name="MapApp1ecu2" m_gurobi="gurobi.GRBVar@a2b8f60" app="_MYLvEEr5Ee20gZSDzMnbwg"/>
+  <mappings node="_N9op8Er5Ee20gZSDzMnbwg" name="MapApp3ecu2" m_gurobi="gurobi.GRBVar@4cde5f00" app="_eIqHEEr5Ee20gZSDzMnbwg"/>
+  <settings name="Settings"/>
+  <route name="Routeecu2ecu1" startNode="_N9op8Er5Ee20gZSDzMnbwg" endNode="_NfyQUEr5Ee20gZSDzMnbwg" data="_Ldg2kUr5Ee20gZSDzMnbwg"/>
+</autoDesigner1:EED>

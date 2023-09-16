@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/AutoDesigner1/src-gen" creationIcons="false" editDirectory="/AutoDesigner1.edit/src-gen"
+    editorDirectory="/AutoDesigner1.editor/src-gen" modelPluginID="AutoDesigner1"
+    modelName="AutoDesigner1" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>autoDesigner1.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="AutoDesigner1" disposableProviderFactory="true" ecorePackage="autoDesigner1.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="autoDesigner1.ecore#//Link_Type">
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Link_Type/CAN_Bus"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Link_Type/FlexRay"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Link_Type/Ethernet"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="autoDesigner1.ecore#//Optimization_Goal">
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Optimization_Goal/endToEndLatency"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Optimization_Goal/responsetime"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Optimization_Goal/multiObjective"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="autoDesigner1.ecore#//Node_type">
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Node_type/ECU"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Node_type/HPCU"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Node_type/NetworkSwitch"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Node_type/Gateway"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="autoDesigner1.ecore#//DDRType">
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//DDRType/DDR"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//DDRType/DDR2"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//DDRType/DDR3"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//DDRType/DDR4"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//DDRType/DDR5"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="autoDesigner1.ecore#//Asil_Level">
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Asil_Level/QM"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Asil_Level/ASIL_A"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Asil_Level/ASIL_B"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Asil_Level/ASIL_C"/>
+      <genEnumLiterals ecoreEnumLiteral="autoDesigner1.ecore#//Asil_Level/ASIL_D"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="autoDesigner1.ecore#//GRBRS"/>
+    <genClasses ecoreClass="autoDesigner1.ecore#//VehicleTopology">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/mapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/node"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/data_in"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/data_out"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//VehicleTopology/process"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Application/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Application/cost"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Application/mappings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Application/app_gurobi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Application/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Application/destination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Application/safetycritical"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Application/process"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Application/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Application/cammapping"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Application/lidarmapping"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Mapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Mapping/node"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Mapping/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Mapping/m_gurobi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Mapping/app"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Task/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Task/frameLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Task/period"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Task/link"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Task/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Task/startingTimeVal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Task/startTime"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Link/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Link/cost"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Link/ls"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Link/lf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Link/d_out"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Link/d_in"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Link/task"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Link/link_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Link/id"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Data_In">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data_In/d_out"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Data_In/data_in_gurobi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data_In/link"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data_In/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Data_In/name"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Data/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data/sentby"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data/receivedby"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data/d_in"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data/d_out"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data/task"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Data/id"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data/usercreatedtask"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Node">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Node/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Node/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Node/n_gurobi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Node/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Node/destination"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Node/links"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Node/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Node/receiver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Node/mappings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Node/id"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Data_Out">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data_Out/d_in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Data_Out/data_out_gurobi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data_Out/link"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Data_Out/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Data_Out/name"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Process">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Process/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Process/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Process/wcet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Process/period"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Process/startingTime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Process/recieveData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Process/sendData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Process/startingTimeVal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Process/id"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//EED">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/nodes"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/links"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/data"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/applications"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/mappings"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/data_ins"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/data_outs"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/settings"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/route"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/process"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/tasks"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/cores"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/partitions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/gpus"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/cameras"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/memories"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/processors"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/lidars"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/caches"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/usbs"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/ethernets"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/camMappings"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//EED/lidarMappings"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//ECU">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//ECU/memories"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//ECU/processors"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//HPCU">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//HPCU/gpus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//HPCU/memories"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//HPCU/processors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//HPCU/partitions"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//NetworkSwitch"/>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Gateway"/>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Settings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/optimizationGoal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/LOR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/LORValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/costOptimization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/showMappings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Settings/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/redundantRoutes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/homogeneousRedundantRoutes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/useOptimizationGoals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/LORPropPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/OptPropPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Settings/resourceUsage"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Route">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Route/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Route/startNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Route/endNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Route/data"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Route/tasks"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//L_In">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//L_In/l_in_gurobi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//L_In/l_out"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//L_Out">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//L_Out/l_out_gurobi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//L_Out/l_in"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Order/order_gurobi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Order/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Order/has_dataout"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Order/has_datain"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//GPU">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//GPU/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//GPU/memory_size_in_GB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//GPU/cuda_cores"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Memory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Memory/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Memory/DDR_Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Memory/memory_size_gb"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Processor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Processor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Processor/turbo_boost"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Processor/cores"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Core">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Core/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Core/clock_frequency_ghz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Core/asil_d"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Core/Asil"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Core/turbo_boost"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Partition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Partition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Partition/safety_critical"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Partition/capacity_GB"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Partition/memory"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Partition/ethernet"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Partition/usb"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Partition/cache"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Ethernet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Ethernet/name"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//USB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//USB/name"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Cache">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Cache/name"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Lidar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Lidar/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Lidar/lidarmapping"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//Camera">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute autoDesigner1.ecore#//Camera/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//Camera/cammapping"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//ControllNode"/>
+    <genClasses ecoreClass="autoDesigner1.ecore#//UserCreatedTask"/>
+    <genClasses ecoreClass="autoDesigner1.ecore#//LidarMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//LidarMapping/lidar"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//LidarMapping/application"/>
+    </genClasses>
+    <genClasses ecoreClass="autoDesigner1.ecore#//CamMapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//CamMapping/camera"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference autoDesigner1.ecore#//CamMapping/application"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

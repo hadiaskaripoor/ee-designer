@@ -1,0 +1,69 @@
+{
+  "name": "@eclipse-sirius/sirius-web",
+  "author": "Eclipse Sirius",
+  "version": "0.5.0",
+  "license": "EPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eclipse-sirius/sirius-web"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "3.4.7",
+    "@eclipse-sirius/sirius-components": "file:.yalc/@eclipse-sirius/sirius-components",
+    "@material-ui/core": "4.12.3",
+    "@material-ui/icons": "4.11.2",
+    "fontsource-roboto": "4.0.0",
+    "graphql": "15.5.1",
+    "graphql-tag": "2.12.5",
+    "graphql.macro": "1.4.2",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.2.0",
+    "reflect-metadata": "0.1.13",
+    "subscriptions-transport-ws": "0.9.19",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.0.0",
+    "@testing-library/user-event": "13.2.1",
+    "@types/jest": "27.0.0",
+    "@types/node": "16.6.0",
+    "@types/react": "17.0.17",
+    "@types/react-dom": "17.0.9",
+    "@types/react-router-dom": "5.1.8",
+    "@types/uuid": "8.3.1",
+    "@xstate/react": "^1.6.3",
+    "jest-junit-reporter": "1.1.0",
+    "prettier": "2.3.2",
+    "react-scripts": "4.0.3",
+    "snabbdom": "^0.6.9",
+    "sprotty": "^0.11.1",
+    "typescript": "4.3.5",
+    "xstate": "^4.26.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build -- --profile",
+    "test": "react-scripts test --modulePaths=src --testResultsProcessor ./node_modules/jest-junit-reporter",
+    "ci-test": "react-scripts test --watchAll=false --modulePaths=src --testResultsProcessor ./node_modules/jest-junit-reporter --coverage",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx,css}\"",
+    "format-lint": "prettier --list-different \"src/**/*.{js,ts,tsx,css}\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
