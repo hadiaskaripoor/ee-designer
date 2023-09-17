@@ -1,5 +1,5 @@
 # E/E Designer
-E/E Designer is a software framework to facilitate the design and sythesis of vehicle electrical and/or electronic (E/E) architectures.
+E/E Designer is a software framework to facilitate design and sythesis of vehicle electrical and/or electronic (E/E) architectures.
 
 ## Building
 ### Requirements
